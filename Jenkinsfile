@@ -5,7 +5,7 @@ pipeline {
         VERSION = "${BUILD_NUMBER}"
         PROJECT = 'nodeapp'
         IMAGE = "$PROJECT:$VERSION"
-        registry = "madavi/jenkins"
+        registry = "madavi/spring"
         registryCredential = 'dockerhub'
         dockerImage = ''
     }
@@ -18,6 +18,11 @@ pipeline {
              
           }
         }
+      stage('Build') { 
+            steps {
+                sh 'mvn clean package' 
+            }
+        }  
       stage('Image Build'){
            steps{
                script{
