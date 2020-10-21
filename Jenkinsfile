@@ -14,7 +14,7 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'main', url: 'https://github.com/inspired123/output-for-springboot-spring-petclinic.git'
+                git branch: 'main', url: 'https://github.com/inspired123/spring.git'
              
           }
         }
