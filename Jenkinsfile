@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'k8s'}
+    agent any
     environment
      {
         VERSION = "${BUILD_NUMBER}"
